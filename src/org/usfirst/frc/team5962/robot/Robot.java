@@ -26,7 +26,7 @@ import com.ctre.CANTalon.TalonControlMode;
 
 public class Robot extends IterativeRobot {
   
-	CANTalon _talon = new CANTalon(0);	
+	CANTalon _talon = new CANTalon(11);	
 	
 	Joystick _joy = new Joystick(0);	
 	StringBuilder _sb = new StringBuilder();
@@ -45,9 +45,9 @@ public class Robot extends IterativeRobot {
         _talon.configPeakOutputVoltage(+12.0f, -12.0f);
         /* set closed loop gains in slot0 */
         _talon.setProfile(0);
-        _talon.setF(1.35);
-        _talon.setP(0.025);
-        _talon.setI(0); 
+        _talon.setF(0.7);
+        _talon.setP(0);
+        _talon.setI(0.3); 
         _talon.setD(0);
 	}
     /**
